@@ -4,7 +4,6 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule }
 import { MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +17,7 @@ export class LoginComponent {
       senha: new FormControl("")
   })
 
-  constructor(private router: Router, private toastr: ToastrService, private formBuilder: FormBuilder){
+  constructor(private router: Router,  private formBuilder: FormBuilder){
     this.loginSchema = this.formBuilder.group({
       email: new FormControl(""),
       senha: new FormControl("")
@@ -29,10 +28,10 @@ export class LoginComponent {
   onSubimit(){
     console.log(this.loginSchema.controls.email.value);
     if(this.loginSchema.controls.email.value !== '' && this.loginSchema.controls.senha.value !== ''){
-      this.toastr.success("Loginqqqq");
-     // this.router.navigate(['/home']);
+      this.router.navigate(['/home']);
+      alert('Login feito com sucesso.');
     } else{
-      alert("erroooooor")
+      alert("Email ou senha inválido")
     }
   }
 }

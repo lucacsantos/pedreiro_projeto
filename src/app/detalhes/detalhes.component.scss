@@ -1,0 +1,40 @@
+div {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #555;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 60px;
+}
+
+.contato{
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid rgb(204, 204, 204);
+  text-align: center;
+}
+
+.contato p {
+  margin: 5px 0;
+}

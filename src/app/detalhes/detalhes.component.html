@@ -1,0 +1,30 @@
+<div *ngIf="servico">
+  <h1>{{ servico.titulo }}</h1>
+  <img [src]="servico.imagem" [alt]="servico.titulo" />
+  <p>{{ servico.preco }}</p>
+
+  <h2>Adicionar Comentário</h2>
+  <textarea [(ngModel)]="novoComentario" placeholder="Escreva seu comentário"></textarea>
+  <div class="button-row">
+    <button mat-flat-button (click)="adicionarComentario()">Adicionar</button>
+  </div>
+
+  <h3>Comentários:</h3>
+  <ul>
+    <li *ngFor="let comentario of comentarios">{{ comentario }}</li>
+  </ul>
+</div>
+
+
+  <div class="contato">
+    <h2>Entre em Contato</h2>
+    <p><strong>Telefone:</strong> (11) 98765-4321</p>
+    <p><strong>E-mail:</strong> contatoemail</p>
+    <p><strong>Endereço:</strong> Rua </p>
+    <p><strong>Horário de Atendimento:</strong> Segunda a Sexta</p>
+  </div>
+
+
+<div *ngIf="!servico">
+  <p>Serviço não encontrado!</p>
+</div>
